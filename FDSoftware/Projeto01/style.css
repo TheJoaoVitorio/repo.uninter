@@ -1,0 +1,385 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'lato';
+}
+body{
+    background: #FAFAFA;
+}
+
+.flex{
+  display: flex;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerHeader{
+  color: #f54c68;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px;
+}
+
+.containerRadius{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#titleRadius{
+  margin: 8px;
+  color: #f54c68;
+  font-weight: 500;
+}
+
+.form{
+    background-color: #FFFFFF;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 12px;
+}
+
+.inputs input{
+    border-radius: 8px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+}
+
+.radio-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 16px;
+  color: rgb(39, 39, 39);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #f54c68;
+  color: #f54c68;
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: #f54c68;
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #f54c68;
+  box-shadow: 0 0 10px #f54c68;
+}
+
+.sabor-section{
+  width: 300px;
+  padding: 8px;
+}
+
+.select-container {
+  position: relative;
+  max-width: 190px;
+}
+
+.custom-select {
+  width: 190px;
+  min-height: 40px;
+  padding: .15rem .5rem;
+  color: #242424;
+  background-color: white;
+  border: none;
+  outline: 1px solid lightgrey;
+  border-radius: 4px 4px 2px 2px;
+  line-height: 1.15;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #242424;
+  pointer-events: none;
+}
+
+.custom-select:focus {
+  outline: 1px solid #f54c68;
+  outline-offset: -1px;
+}
+
+.custom-select:hover {
+  outline-color: #f54c68;
+}
+
+.section-add{
+  gap: 12px;
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f54c68;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+  padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+  border-color: #f54c68;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+  background: #f54c68;
+  border-color: #f54c68;
+  animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.date-container {
+  position: relative;
+  max-width: 200px;
+}
+
+.custom-date {
+  width: 100%;
+  min-height: 40px;
+  padding: .15rem .5rem;
+  color: #242424;
+  background-color: white;
+  border: none;
+  outline: 1px solid lightgrey;
+  border-radius: 4px 4px 2px 2px;
+  line-height: 1.15;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Remove os botões de spinner do Chrome */
+.custom-date::-webkit-inner-spin-button,
+.custom-date::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estiliza o ícone do calendário */
+.custom-date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.6;
+  filter: invert(0.4);
+}
+
+.custom-date::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Estados de foco e hover */
+.custom-date:focus {
+  outline: 1px solid #f54c68;
+  outline-offset: -1px;
+}
+
+.custom-date:hover {
+  outline-color: #f54c68;
+}
+
+/* Para Firefox */
+.custom-date {
+  -moz-appearance: textfield;
+}
+
+/* Para navegadores que não suportam input type="date" */
+.custom-date::placeholder {
+  color: #666;
+}
+
+.textarea-container {
+  position: relative;
+  max-width: 190px;
+}
+
+.custom-textarea {
+  width: 200px;
+  min-height: 50px;
+  padding: .5rem;
+  color: #242424;
+  background-color: white;
+  border: none;
+  outline: 1px solid lightgrey;
+  border-radius: 4px 4px 2px 2px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.custom-textarea:focus {
+  outline: 2px solid #f54c68;
+  outline-offset: -1px;
+}
+
+.custom-textarea:hover {
+  outline-color: #f54c68;
+}
+
+/* Estilizando a scrollbar para navegadores WebKit */
+.custom-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.custom-textarea::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* From Uiverse.io by McHaXYT */ 
+.button {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #f54c68;
+  color: #eee;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+}

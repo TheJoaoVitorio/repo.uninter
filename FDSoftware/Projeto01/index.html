@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 1 - FDS - Uninter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="containerHeader" >
+            Pedido pizza
+        </div>
+        <div class="form" >
+            <form method="POST" action="script.jsp">
+                <div class="inputs" >
+                    <input type="text" placeholder="Nome" name="nome">
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+                <div class="containerRadius">
+                    <label id="titleRadius" for="">Tamanho da pizza</label>
+    
+                    <div class="radio-buttons-container">
+                        <div class="radio-button">
+                            <input name="radio-group" id="radio2" class="radio-button__input" type="radio" value="p">
+                            <label for="radio2" class="radio-button__label">
+                                <span class="radio-button__custom"></span>
+                                    
+                                    Pequena
+                            </label>
+                        </div>
+                        <div class="radio-button">
+                            <input name="radio-group" id="radio1" class="radio-button__input" type="radio" value="m">
+                            <label for="radio1" class="radio-button__label">
+                                <span class="radio-button__custom"></span>
+                                
+                                Média
+                            </label>
+                        </div>
+                        <div class="radio-button">
+                            <input name="radio-group" id="radio3" class="radio-button__input" type="radio" value="g">
+                            <label for="radio3" class="radio-button__label">
+                                <span class="radio-button__custom"></span>
+                                    
+                                    Grande
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <label id="titleRadius" for="">Sabor: </label>
+                <div class="select-container">
+                    <select class="custom-select" name="sabor">
+                      <option value="" selected disabled>Selecione</option>
+                      <option value="1">Calabresa</option>
+                      <option value="2">Frango Catupiry</option>
+                      <option value="3">Portuguesa</option>
+                    </select>
+                    <div class="select-arrow"></div>
+                  </div>
+
+            
+                <label id="titleRadius" for="">Adicionais: </label>
+                
+                <div class="flex section-add" >
+                    <div> 
+                        <div class="checkbox-wrapper-46">
+                            <input type="checkbox" name="borda" id="cbx-46" class="inp-cbx" />
+                            <label for="cbx-46" class="cbx"
+                                ><span>
+                                <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                                ><span>Com Borda</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div> 
+                        <div class="checkbox-wrapper-46">
+                            <input type="checkbox" name="queijo" id="cbx-47" class="inp-cbx" />
+                            <label for="cbx-47" class="cbx"
+                                ><span>
+                                <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                                ><span>Queijo Extra</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <label id="titleRadius" for="">Data de entrega: </label>
+                <div class="date-container">
+                    <input type="date" name="dateDelivery" class="custom-date" placeholder="Selecione uma data">
+                </div>
+
+                <label id="titleRadius" for="">Mensagem: </label>
+                <div class="textarea-container">
+                    <textarea 
+                      name="mensagem"
+                      class="custom-textarea" 
+                      placeholder="Digite seu texto aqui..."
+                    ></textarea>
+                  </div>
+
+                  <button class="button" type="submit ">
+                        Enviar
+                  </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
